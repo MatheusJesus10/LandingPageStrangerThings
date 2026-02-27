@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Benguiat";
-  src: url("fontes/Benguiat\ Bold.ttf");
+  src: url(fontes/Benguiat\ Bold.ttf);
 }
 
 body {
@@ -17,6 +17,7 @@ body {
 
 button {
   font-family: "Poppins", sans-serif;
+  cursor: pointer;
 }
 
 header {
@@ -28,28 +29,81 @@ header {
   z-index: 9;
 }
 
+section {
+  width: 100%;
+  display: flex;
+  padding: 7vw;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  gap: 12px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid white;
+  padding: 16px 0px;
+}
+
 .hero {
   background-image: url("imagens/hero.webp");
   background-position: 50% 0%;
   background-size: cover;
-  width: 100%;
   height: 100vh;
-  display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8vw;
+  padding: 0 7vw 7vw 7vw;
+
+  .esquerda,
+  .direita {
+    width: 30%;
+  }
 
   .esquerda {
-    width: 30%;
-
     h3 {
       font-size: 24px;
       font-weight: 500;
       letter-spacing: 4px;
     }
     h1 {
-      font-size: 4vw;
+      font-size: 3.7vw;
       font-family: "Benguiat", serif;
+    }
+  }
+
+  .direita {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    p {
+      font-size: 2vw;
+      margin-bottom: 32px;
+      text-align: end;
+    }
+  }
+}
+
+.sessaoCidade {
+  flex-direction: column;
+
+  .titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-size: 40px;
+    }
+  }
+  .cards {
+    margin-top: 52px;
+    display: flex;
+    justify-content: space-between;
+
+    .card {
+      background-image: url();
     }
   }
 }
