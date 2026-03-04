@@ -13,6 +13,7 @@ body {
   background-color: #0c0102;
   color: rgba(255, 255, 255, 0.9);
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 button {
@@ -245,5 +246,60 @@ footer {
 @keyframes textoInfinito {
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 1400px) {
+  .sessaoCidade .cards .card {
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+  }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 6vw;
+  }
+
+  header h2 {
+    font-size: 28px;
+  }
+  .hero {
+    flex-direction: column;
+    padding: 26% 4vw 0;
+
+    .esquerda,
+    .direita {
+      width: 100%;
+      text-align: center;
+    }
+
+    .esquerda {
+      h3,
+      h1 {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 12vw;
+      }
+    }
+
+    .direita {
+      align-items: start;
+      p {
+        font-size: 5.2vw;
+        text-align: start;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .sessaoCidade {
+    margin-top: 80px;
+    button {
+      display: none;
+    }
   }
 }
