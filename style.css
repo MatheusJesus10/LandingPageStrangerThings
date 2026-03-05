@@ -263,8 +263,13 @@ footer {
   }
 
   header h2 {
-    font-size: 28px;
+    font-size: 20px;
   }
+
+  header img {
+    width: 20%;
+  }
+
   .hero {
     flex-direction: column;
     padding: 26% 4vw 0;
@@ -300,6 +305,56 @@ footer {
     margin-top: 80px;
     button {
       display: none;
+    }
+
+    .cards {
+      margin-top: 20px;
+      flex-direction: column;
+      gap: 20px;
+
+      .card {
+        width: 100%;
+      }
+    }
+  }
+
+  .sessaoDepoimentos {
+    .logotipos {
+      img:nth-child(1) {
+        width: 20%;
+      }
+
+      img:nth-child(2) {
+        width: 28%;
+      }
+
+      img:nth-child(3) {
+        width: 20%;
+      }
+    }
+
+    .depoimentos {
+      flex-direction: column;
+      gap: 48px;
+
+      .depoimento {
+        width: 100%;
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .sessaoObrigado {
+    h2 {
+      text-align: center;
+    }
+
+    ul{
+        width: max-content;
+        gap: 32px;
     }
   }
 }
