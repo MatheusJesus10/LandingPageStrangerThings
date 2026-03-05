@@ -28,6 +28,13 @@ header {
   padding: 4vw;
   position: absolute;
   z-index: 9;
+
+    h2 {
+        font-size: 2vw;
+    }
+    img {
+        width: 8%;
+    }
 }
 
 section {
@@ -64,17 +71,34 @@ ul {
 }
 
 .hero {
-  background-image: url("imagens/hero.webp");
   background-position: 50% 0%;
   background-size: cover;
   height: 100vh;
   align-items: center;
   justify-content: space-between;
   padding: 0 7vw 7vw 7vw;
+  position: relative;
+
+  picture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+  }
 
   .esquerda,
   .direita {
     width: 30%;
+    z-index: 3;
   }
 
   .esquerda {
@@ -99,6 +123,17 @@ ul {
       text-align: end;
     }
   }
+}
+
+.hero:before {
+  content: "";
+  background: linear-gradient(180deg, rgba(12, 1, 2, 0) 0%, #0c0102 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
 }
 
 .sessaoCidade {
@@ -258,6 +293,9 @@ footer {
 }
 
 @media (max-width: 600px) {
+  section {
+    padding: 4vw;
+  }
   h2 {
     font-size: 6vw;
   }
@@ -348,13 +386,74 @@ footer {
   }
 
   .sessaoObrigado {
+    margin: 40px 0px 60px;
     h2 {
       text-align: center;
     }
 
-    ul{
-        width: max-content;
-        gap: 32px;
+    ul {
+      width: max-content;
+      gap: 32px;
+    }
+  }
+
+  footer {
+    padding-top: 40px;
+    .conteudoFooter {
+      padding: 4vw;
+      flex-direction: column;
+
+      .logoFooter {
+        width: 100%;
+
+        h2,
+        h3 {
+          text-align: center;
+        }
+
+        h2 {
+          font-size: 12vw;
+        }
+      }
+
+      .secoesFooter {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+
+        .social {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          margin: 40px 0px 32px;
+        }
+
+        .institucional {
+          width: 40%;
+        }
+
+        .parceiros {
+          width: 50%;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .logotiposFooter {
+      margin-top: 30px;
+      padding-bottom: 10px;
+
+      img {
+        width: 12vw;
+      }
+    }
+
+    .textoInfinito h3 {
+      font-size: 20vw;
     }
   }
 }
