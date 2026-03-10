@@ -322,6 +322,17 @@ footer {
 }
 
 @media (max-width: 600px) {
+  #preloader svg {
+    width: 70vw;
+  }
+  #smooth-wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  #smooth-content {
+    width: 100%;
+  }
   section {
     padding: 4vw;
   }
